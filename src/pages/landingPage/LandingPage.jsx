@@ -3,6 +3,7 @@ import Accessories from "./accessories/Accessories";
 import BestSeller from "./bestSeller/BestSeller";
 import FeaturedProducts from "./featuredProducts/FeaturedProducts";
 import Hero from "./header/Hero";
+import NewArrivals from "./newArrivals/NewArrivals";
 
 const LandingPage = () => {
    return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
          <FeaturedProducts />
          <Accessories />
          <BestSeller />
+         <NewArrivals />
       </>
    );
 };
