@@ -1,0 +1,139 @@
+.accessories {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   color: white;
+
+   @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+   }
+
+   &__child {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      padding: 3%;
+      position: relative;
+
+      @media (max-width: 500px) {
+         grid-template-columns: 1fr;
+         text-align: center;
+      }
+
+      img {
+         width: 100%;
+         z-index: 10;
+      }
+
+      &--desc {
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
+         z-index: 10;
+
+         @media (max-width: 500px) {
+            margin-bottom: 7%;
+         }
+
+         h4 {
+            font-size: 1.6rem;
+
+            // @media (max-width: 1024px) {
+            //    font-size: 1.4rem;
+            // }
+         }
+
+         h3 {
+            font-weight: 700;
+            font-size: 4.8rem;
+
+            @media (max-width: 1024px) {
+               font-size: 3.2rem;
+            }
+         }
+
+         p {
+            font-weight: 500;
+
+            @media (max-width: 1024px) {
+               font-size: 1.4rem;
+            }
+
+            @media (max-width: 500px) {
+               margin: 0 10%;
+            }
+         }
+
+         button {
+            margin: 3% 0;
+
+            @media (max-width: 500px) {
+               align-self: center;
+            }
+         }
+      }
+
+      &:nth-child(1) {
+         background: var(--green);
+         z-index: 2;
+
+         h4 {
+            color: var(--color-pri);
+         }
+
+         button {
+            background: var(--color-pri);
+         }
+
+         .circle1,
+         .circle2 {
+            background: linear-gradient(270deg, var(--green) 0%, #b3f6dc 100%);
+         }
+      }
+
+      &:nth-child(2) {
+         background: var(--color-pri);
+
+         h4 {
+            color: var(--green);
+         }
+
+         button {
+            background: var(--green);
+         }
+
+         .circle1,
+         .circle2 {
+            background: linear-gradient(
+               97.49deg,
+               rgba(138, 168, 248, 0.6) -0.43%,
+               rgba(49, 91, 255, 0.6) 144.53%
+            );
+         }
+      }
+
+      .circle1,
+      .circle2 {
+         position: absolute;
+         border-radius: 50%;
+      }
+
+      .circle1 {
+         width: 10rem;
+         height: 10rem;
+         left: 2%;
+         top: -10%;
+
+         @media (max-width: 500px) {
+            top: -5%;
+         }
+      }
+      .circle2 {
+         width: 3rem;
+         height: 3rem;
+         bottom: 10%;
+         right: 15%;
+      }
+   }
+}
