@@ -1,11 +1,13 @@
 import React from "react";
+import FeaturedProducts from "./featuredProducts/FeaturedProducts";
 import Hero from "./header/Hero";
 
 const LandingPage = () => {
    return (
-      <div>
+      <>
          <Hero />
-      </div>
+         <FeaturedProducts />
+      </>
    );
 };
 

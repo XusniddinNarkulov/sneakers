@@ -51,3 +51,16 @@ body {
       transform: scale(1.05);
    }
 }
+
+h2 {
+   font-weight: 700;
+   font-size: 4.8rem;
+   line-height: 5.6rem;
+   letter-spacing: -0.04em;
+   color: var(--color-pri);
+
+   @media (max-width: 750px) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+   }
+}
