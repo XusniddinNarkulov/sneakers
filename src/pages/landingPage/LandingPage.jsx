@@ -1,5 +1,6 @@
 import React from "react";
 import Accessories from "./accessories/Accessories";
+import BestSeller from "./bestSeller/BestSeller";
 import FeaturedProducts from "./featuredProducts/FeaturedProducts";
 import Hero from "./header/Hero";
 
@@ -9,6 +10,7 @@ const LandingPage = () => {
          <Hero />
          <FeaturedProducts />
          <Accessories />
+         <BestSeller />
       </>
    );
 };

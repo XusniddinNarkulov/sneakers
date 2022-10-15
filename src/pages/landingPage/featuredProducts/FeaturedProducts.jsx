@@ -61,7 +61,7 @@ const FeaturedProducts = () => {
 
                      <div className="products__prod--stars">
                         {[...Array(4)].map((e, i) => (
-                           <StarFilled color={"#fe7831"} key={i} />
+                           <StarFilled key={i} />
                         ))}
                         {<StarFilled color={"#c1c0c0"} />}
                      </div>
