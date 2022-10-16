@@ -1,0 +1,120 @@
+.categories {
+   padding: 5%;
+
+   @media (max-width: 900px) {
+      margin-top: 15%;
+   }
+
+   &__head {
+      text-align: center;
+
+      p {
+         width: 60%;
+         margin: 0 auto;
+         padding: 2%;
+         font-weight: 500;
+         font-size: 1.8rem;
+         line-height: 3.2rem;
+
+         @media (max-width: 800px) {
+            width: 80%;
+         }
+
+         @media (max-width: 600px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            width: 95%;
+         }
+      }
+   }
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      &--card {
+         position: relative;
+         border-radius: 2rem;
+         background: var(--bg-color);
+         padding: 2rem;
+         max-width: 35rem;
+
+         @media (max-width: 1250px) {
+            margin-bottom: 5%;
+         }
+
+         @media (max-width: 800px) {
+            max-width: 50rem;
+            margin-bottom: 15%;
+         }
+
+         @media (max-width: 700px) {
+            margin-bottom: 20%;
+         }
+         @media (max-width: 600px) {
+            margin-bottom: 25%;
+         }
+
+         @media (max-width: 500px) {
+            max-width: 30rem;
+         }
+
+         h3 {
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 4rem;
+            letter-spacing: -0.04em;
+            width: 50%;
+            color: var(--color-pri);
+         }
+
+         p {
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: var(--grey);
+            padding: 3% 0;
+         }
+
+         b {
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 3.2rem;
+            text-decoration-line: underline;
+            color: var(--blue);
+         }
+
+         &--img {
+            width: 100%;
+            margin-bottom: -50%;
+            margin-top: -15%;
+            margin-left: 15%;
+         }
+
+         &--decoration {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+         }
+      }
+
+      // &::-webkit-scrollbar {
+      //    height: 0.6rem;
+
+      //    @media (max-width: 500px) {
+      //       display: none;
+      //    }
+      // }
+      // &::-webkit-scrollbar-track {
+      //    width: 50rem;
+      //    background-color: #ebebea;
+      //    border-radius: 0.8rem;
+      //    margin: 0 20rem;
+      // }
+      // &::-webkit-scrollbar-thumb {
+      //    background: var(--green);
+      //    border-radius: 0.8rem;
+      // }
+   }
+}
