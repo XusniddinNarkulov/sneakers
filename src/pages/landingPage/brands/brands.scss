@@ -1,0 +1,90 @@
+.brands {
+   padding: 5%;
+   background-color: var(--bg-color);
+   position: relative;
+
+   h2 {
+      text-align: center;
+      z-index: 10;
+      position: relative;
+   }
+
+   &__logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3%;
+      // padding: 5% 0;
+      z-index: 10;
+      position: relative;
+
+      svg {
+         &:nth-child(1) {
+            transform: rotate(180deg);
+
+            path {
+               stroke: var(--grey);
+            }
+         }
+
+         &:nth-child(3) {
+            path {
+               stroke: var(--blue);
+            }
+         }
+      }
+
+      &--grid {
+         display: grid;
+         grid-template-columns: repeat(4, 20rem);
+         gap: 5rem;
+         overflow-x: scroll;
+         padding: 7% 5% 5% 5%;
+
+         &--child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background-color: white;
+            padding: 2rem;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%23EBEBEBFF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 1rem;
+            outline: 1rem solid white;
+         }
+
+         &::-webkit-scrollbar {
+            height: 0.6rem;
+            top: 2rem;
+
+            @media (max-width: 500px) {
+               display: none;
+            }
+         }
+         &::-webkit-scrollbar-track {
+            width: 50rem;
+            background-color: #ebebea;
+            border-radius: 0.8rem;
+            margin: 0 20rem;
+         }
+         &::-webkit-scrollbar-thumb {
+            background: var(--green);
+            border-radius: 0.8rem;
+         }
+      }
+   }
+
+   &__circle {
+      top: 5%;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      position: absolute;
+      background: linear-gradient(
+         270deg,
+         rgba(254, 120, 49, 0.7) 0%,
+         rgba(255, 222, 190, 0.7) 100%
+      );
+      backdrop-filter: blur(2.5rem);
+   }
+}

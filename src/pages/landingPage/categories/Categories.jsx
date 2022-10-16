@@ -27,24 +27,6 @@ const prods = [
       ellips: ellips3,
       img: volleyball,
    },
-   // {
-   //    category: "Sneakers",
-   //    items: 120,
-   //    ellips: ellips1,
-   //    img: sneaker,
-   // },
-   // {
-   //    category: "Football",
-   //    items: 80,
-   //    ellips: ellips2,
-   //    img: football,
-   // },
-   // {
-   //    category: "Volleyball",
-   //    items: 160,
-   //    ellips: ellips3,
-   //    img: volleyball,
-   // },
 ];
 
 const Categories = () => {
