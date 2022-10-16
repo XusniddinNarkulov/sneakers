@@ -68,6 +68,7 @@
             letter-spacing: -0.04em;
             width: 50%;
             color: var(--color-pri);
+            text-transform: capitalize;
          }
 
          p {
@@ -96,6 +97,27 @@
             position: absolute;
             top: 10%;
             right: 10%;
+         }
+      }
+
+      .sneakers {
+         h3,
+         b {
+            color: var(--blue);
+         }
+      }
+
+      .football {
+         h3,
+         b {
+            color: var(--orange);
+         }
+      }
+
+      .volleyball {
+         h3,
+         b {
+            color: var(--pink);
          }
       }
 

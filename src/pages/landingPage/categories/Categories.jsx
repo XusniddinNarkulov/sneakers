@@ -10,19 +10,19 @@ import volleyball from "./img/volley1.png";
 
 const prods = [
    {
-      category: "Sneakers",
+      category: "sneakers",
       items: 120,
       ellips: ellips1,
       img: sneaker,
    },
    {
-      category: "Football",
+      category: "football",
       items: 80,
       ellips: ellips2,
       img: football,
    },
    {
-      category: "Volleyball",
+      category: "volleyball",
       items: 160,
       ellips: ellips3,
       img: volleyball,
