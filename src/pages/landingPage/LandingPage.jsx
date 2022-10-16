@@ -6,11 +6,13 @@ import Categories from "./categories/Categories";
 import FeaturedProducts from "./featuredProducts/FeaturedProducts";
 import Footer from "./footer/Footer";
 import Hero from "./header/Hero";
+import Navbar from "./navbar/Navbar";
 import NewArrivals from "./newArrivals/NewArrivals";
 
 const LandingPage = () => {
    return (
       <>
+         <Navbar />
          <Hero />
          <FeaturedProducts />
          <Accessories />
@@ -18,7 +20,7 @@ const LandingPage = () => {
          <NewArrivals />
          <Advantages />
          <Categories />
-         <Footer/>
+         <Footer />
       </>
    );
 };
