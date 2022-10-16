@@ -1,0 +1,22 @@
+.nav-link {
+   position: relative;
+   color: var(--color-pri);
+   font-weight: 500;
+   font-size: 1.8rem;
+
+   &:hover {
+      color: var(--pink);
+
+      &::after {
+         content: " ";
+         width: 0.8rem;
+         height: 0.8rem;
+         border-radius: 50%;
+         background: var(--pink);
+         position: absolute;
+         bottom: -1.5rem;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+}
