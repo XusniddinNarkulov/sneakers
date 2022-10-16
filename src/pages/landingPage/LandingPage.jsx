@@ -4,6 +4,7 @@ import Advantages from "./advantages/Advantages";
 import BestSeller from "./bestSeller/BestSeller";
 import Categories from "./categories/Categories";
 import FeaturedProducts from "./featuredProducts/FeaturedProducts";
+import Footer from "./footer/Footer";
 import Hero from "./header/Hero";
 import NewArrivals from "./newArrivals/NewArrivals";
 
@@ -17,6 +18,7 @@ const LandingPage = () => {
          <NewArrivals />
          <Advantages />
          <Categories />
+         <Footer/>
       </>
    );
 };
