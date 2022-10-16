@@ -9,6 +9,7 @@ import Footer from "./footer/Footer";
 import Hero from "./header/Hero";
 import Navbar from "./navbar/Navbar";
 import NewArrivals from "./newArrivals/NewArrivals";
+import Subscribe from "./subscribe/Subscribe";
 
 const LandingPage = () => {
    return (
@@ -21,7 +22,8 @@ const LandingPage = () => {
          <NewArrivals />
          <Advantages />
          <Categories />
-         <Brands/>
+         <Brands />
+         <Subscribe />
          <Footer />
       </>
    );

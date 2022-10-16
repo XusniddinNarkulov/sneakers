@@ -1,0 +1,136 @@
+.subscribe {
+   position: relative;
+   margin-right: 10%;
+   border-radius: 0 2rem 2rem 0;
+   background: linear-gradient(97.49deg, #8aa8f8 -0.43%, #315bff 144.53%);
+   padding: 5%;
+   padding-left: 10%;
+   margin-top: -13%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+   @media (max-width: 1024px) {
+      grid-template-columns: 1.3fr 1fr;
+   }
+
+   @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      padding-left: 5%;
+   }
+   @media (max-width: 600px) {
+      margin-right: 0;
+      border-radius: 0;
+   }
+
+   &__circle {
+      position: absolute;
+      background: linear-gradient(270deg, #ff3c78 2.8%, #ffb2b2 100%);
+      backdrop-filter: blur(20px);
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      top: 5%;
+      left: -3%;
+   }
+
+   &__left {
+      position: relative;
+      z-index: 1;
+
+      h3 {
+         font-weight: 700;
+         font-size: 4.8rem;
+         line-height: 5.6rem;
+         color: white;
+
+         @media (max-width: 1100px) {
+            font-size: 4rem;
+         }
+
+         @media (max-width: 900px) {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+         }
+
+         @media (max-width: 600px) {
+            font-size: 3.2rem;
+            line-height: 4rem;
+         }
+      }
+
+      form {
+         display: flex;
+         flex-direction: column;
+         padding: 10% 0;
+
+         input,
+         button {
+            padding: 4%;
+            font-size: 1.8rem;
+
+            @media (max-width: 600px) {
+               font-size: 1.4rem;
+            }
+         }
+
+         input {
+            border-radius: 2rem 2rem 0 0;
+            text-align: center;
+
+            &:focus {
+               outline: none;
+            }
+
+            &::placeholder {
+               text-align: center;
+            }
+         }
+
+         button {
+            border-radius: 0 0 2rem 2rem;
+            background: var(--blue);
+            color: white;
+            text-transform: uppercase;
+         }
+      }
+
+      &--oauth {
+         position: absolute;
+         display: flex;
+         gap: 1rem;
+         right: -100%;
+         top: 0;
+
+         @media (max-width: 1024px) {
+            position: static;
+            justify-content: center;
+         }
+
+         div {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+               path {
+                  fill: var(--blue);
+               }
+            }
+         }
+      }
+   }
+
+   img {
+      margin-bottom: -15%;
+      margin-top: -20%;
+
+      @media (max-width: 900px) {
+         margin-bottom: -5%;
+      }
+   }
+}
