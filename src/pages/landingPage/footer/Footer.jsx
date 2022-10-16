@@ -2,7 +2,12 @@ import React from "react";
 import "./footer.scss";
 
 import logo from "../../../Logo.png";
-import { Facebook, Instagram, Twitter } from "../../../components/icons/Icons";
+import {
+   Facebook,
+   Instagram,
+   RightArrow,
+   Twitter,
+} from "../../../components/icons/Icons";
 
 const Footer = () => {
    return (
@@ -55,13 +60,17 @@ const Footer = () => {
             </div>
          </div>
 
-         {/* <div className="footer__submain">
+         <div className="footer__submain">
             <p className="footer__submain--copyright">
                © 2021 Shop. Made with love for Brightscout
             </p>
 
-            <div className="footer__submain--move-to-top"></div>
-         </div> */}
+            <div className="footer__submain--move-to-top">
+               <a href="#hero">
+                  <RightArrow />
+               </a>
+            </div>
+         </div>
       </section>
    );
 };

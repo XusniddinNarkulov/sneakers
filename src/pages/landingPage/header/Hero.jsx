@@ -13,7 +13,7 @@ import notificationImg from "./img/notificationImg.png";
 
 const Hero = () => {
    return (
-      <section className="hero">
+      <section className="hero" id="hero">
          <div className="hero__left">
             <h1 className="hero__left--title">Get Your Awesome Sneakers.</h1>
 
