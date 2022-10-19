@@ -6,6 +6,18 @@ import img2 from "./img/image22.png";
 import img3 from "./img/image33.png";
 import img4 from "./img/image44.png";
 import { RightArrow, StarFilled } from "../../../components/icons/Icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { Pagination } from "swiper";
+
+
 
 let products = [
    {
