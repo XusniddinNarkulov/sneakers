@@ -45,15 +45,8 @@
       overflow-x: scroll;
       padding: 4% 0;
       margin-top: 3%;
-
-      @media (max-width: 500px) {
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         margin-top: 7%;
-         gap: 5rem;
-      }
+      white-space: nowrap;
+      // cursor: grab;
 
       &__prod {
          &--img {
@@ -127,16 +120,16 @@
 
       &::-webkit-scrollbar {
          height: 0.6rem;
-
-         @media (max-width: 500px) {
-            display: none;
-         }
       }
       &::-webkit-scrollbar-track {
          width: 50rem;
          background-color: #ebebea;
          border-radius: 0.8rem;
          margin: 0 20rem;
+
+         @media (max-width: 600px) {
+            margin: 0 10rem;
+         }
       }
       &::-webkit-scrollbar-thumb {
          cursor: pointer;
