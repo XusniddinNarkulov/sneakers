@@ -177,6 +177,102 @@ const NewArrivals = () => {
          </div>
     </Swiper>
 
+   {/* ========================================== */}
+
+   <Swiper
+      slidesPerView={3}
+      spaceBetween={90}
+      centeredSlides={false}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      className="mySwiper mobile"
+    >
+      <div className="arrivals__cards">
+            {products.map(({ linearBg, image, description, price }, i) => {
+               return (
+                  <SwiperSlide>
+                  <div className="arrivals__cards--card" key={i}>
+                     <div className={`arrivals__cards--card--img ${linearBg}`}>
+                        <b className="arrivals__cards--card--img--num">
+                           {`0${i + 1}`}
+                        </b>
+
+                        <img src={image} alt={description} />
+
+                        <button>+</button>
+                     </div>
+
+                     <div className="arrivals__cards--card--stars">
+                        {[...Array(4)].map((e, i) => (
+                           <StarFilled key={i} />
+                        ))}
+                        <StarFilled color={"#c1c0c0"} />
+                     </div>
+
+                     <p className="arrivals__cards--card--description">
+                        {description}
+                     </p>
+
+                     <b className="arrivals__cards--card--price">{price}</b>
+                  </div>
+
+
+               </SwiperSlide>
+               );
+            })}
+         </div>
+    </Swiper>
+
+{/* ======================================================== */}
+
+<Swiper
+      slidesPerView={1}
+      spaceBetween={90}
+      centeredSlides={false}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      className="mySwiper mobile2"
+    >
+      <div className="arrivals__cards">
+            {products.map(({ linearBg, image, description, price }, i) => {
+               return (
+                  <SwiperSlide>
+                  <div className="arrivals__cards--card" key={i}>
+                     <div className={`arrivals__cards--card--img ${linearBg}`}>
+                        <b className="arrivals__cards--card--img--num">
+                           {`0${i + 1}`}
+                        </b>
+
+                        <img src={image} alt={description} />
+
+                        <button>+</button>
+                     </div>
+
+                     <div className="arrivals__cards--card--stars">
+                        {[...Array(4)].map((e, i) => (
+                           <StarFilled key={i} />
+                        ))}
+                        <StarFilled color={"#c1c0c0"} />
+                     </div>
+
+                     <p className="arrivals__cards--card--description">
+                        {description}
+                     </p>
+
+                     <b className="arrivals__cards--card--price">{price}</b>
+                  </div>
+
+
+               </SwiperSlide>
+               );
+            })}
+         </div>
+    </Swiper>
+
     </section>
     </>
    );
