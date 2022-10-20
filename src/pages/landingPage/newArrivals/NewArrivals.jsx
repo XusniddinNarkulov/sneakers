@@ -1,4 +1,5 @@
 import React,{useRef, useState} from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 import "./newArrivals.scss";
 
 import img1 from "./img/image11.png";
@@ -62,6 +63,9 @@ let products = [
 ];
 
 const NewArrivals = () => {
+
+   const ref = useRef()
+   const {events} = useDraggable(ref)
    return (
       <>
       {/* <section className="arrivals">
@@ -140,6 +144,8 @@ const NewArrivals = () => {
       }}
       modules={[Pagination]}
       className="mySwiper"
+      ref={ref}
+      {...events}
     >
       <div className="arrivals__cards">
             {products.map(({ linearBg, image, description, price }, i) => {
