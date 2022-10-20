@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 import "./categories.scss";
 
 import ellips1 from "./img/Ellipse32.png";
@@ -27,9 +28,30 @@ const prods = [
       ellips: ellips3,
       img: volleyball,
    },
+   {
+      category: "sneakers",
+      items: 120,
+      ellips: ellips1,
+      img: sneaker,
+   },
+   {
+      category: "football",
+      items: 80,
+      ellips: ellips2,
+      img: football,
+   },
+   {
+      category: "volleyball",
+      items: 160,
+      ellips: ellips3,
+      img: volleyball,
+   },
 ];
 
 const Categories = () => {
+   const ref = useRef();
+   const { events } = useDraggable(ref);
+
    return (
       <section className="categories">
          <div className="categories__head">
@@ -42,7 +64,7 @@ const Categories = () => {
             </p>
          </div>
 
-         <div className="categories__body">
+         <div className="categories__body" ref={ref} {...events}>
             {prods.map(({ category, items, ellips, img }, i) => {
                return (
                   <div className={`categories__body--card ${category}`} key={i}>

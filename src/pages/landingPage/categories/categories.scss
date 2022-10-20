@@ -31,36 +31,33 @@
 
    &__body {
       display: flex;
-      flex-wrap: wrap;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding: 5% 0 10% 0;
       gap: 2rem;
-      justify-content: center;
+      cursor: grabbing;
 
       &--card {
          position: relative;
          border-radius: 2rem;
          background: var(--bg-color);
          padding: 2rem;
-         max-width: 35rem;
 
-         @media (max-width: 1250px) {
-            margin-bottom: 5%;
-         }
+         // @media (max-width: 1250px) {
+         //    margin-bottom: 5%;
+         // }
 
-         @media (max-width: 800px) {
-            max-width: 50rem;
-            margin-bottom: 15%;
-         }
+         // @media (max-width: 800px) {
+         //    margin-bottom: 10%;
+         // }
 
-         @media (max-width: 700px) {
-            margin-bottom: 20%;
-         }
-         @media (max-width: 600px) {
-            margin-bottom: 25%;
-         }
-
-         @media (max-width: 500px) {
-            max-width: 30rem;
-         }
+         // @media (max-width: 700px) {
+         //    margin-bottom: 15%;
+         // }
+         // @media (max-width: 600px) {
+         //    margin-bottom: 20%;
+         // }
 
          h3 {
             font-weight: 700;
@@ -70,6 +67,8 @@
             width: 50%;
             color: var(--color-pri);
             text-transform: capitalize;
+            z-index: 2;
+            position: relative;
          }
 
          p {
@@ -96,8 +95,10 @@
 
          &--decoration {
             position: absolute;
+            z-index: 1;
             top: 10%;
             right: 10%;
+            opacity: 0.7;
          }
       }
 
@@ -122,22 +123,22 @@
          }
       }
 
-      // &::-webkit-scrollbar {
-      //    height: 0.6rem;
+      &::-webkit-scrollbar {
+         height: 0.6rem;
+      }
+      &::-webkit-scrollbar-track {
+         width: 50rem;
+         background-color: #ebebea;
+         border-radius: 0.8rem;
+         margin: 0 20rem;
 
-      //    @media (max-width: 500px) {
-      //       display: none;
-      //    }
-      // }
-      // &::-webkit-scrollbar-track {
-      //    width: 50rem;
-      //    background-color: #ebebea;
-      //    border-radius: 0.8rem;
-      //    margin: 0 20rem;
-      // }
-      // &::-webkit-scrollbar-thumb {
-      //    background: var(--green);
-      //    border-radius: 0.8rem;
-      // }
+         @media (max-width: 600px) {
+            margin: 0 10rem;
+         }
+      }
+      &::-webkit-scrollbar-thumb {
+         background: var(--green);
+         border-radius: 0.8rem;
+      }
    }
 }

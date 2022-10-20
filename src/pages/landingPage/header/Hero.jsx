@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
    CheckCircleIcon,
    HeartOutlined,
@@ -11,7 +11,25 @@ import "./hero.scss";
 import heroImg from "./img/heroImg.avif";
 import notificationImg from "./img/notificationImg.png";
 
+const data = [
+   { customer: "Joan", customerImg: notificationImg, sneakerImg: heroImg },
+   { customer: "David", customerImg: notificationImg, sneakerImg: heroImg },
+   { customer: "Bred", customerImg: notificationImg, sneakerImg: heroImg },
+];
+
 const Hero = () => {
+   const [index, setIndex] = useState(0);
+
+   useEffect(() => {
+      const lastIndex = data.length - 1;
+      if (index > lastIndex) {
+         setIndex(0);
+      }
+      if (index < 0) {
+         setIndex(lastIndex);
+      }
+   }, [index]);
+
    return (
       <section className="hero" id="hero">
          <div className="hero__left">
@@ -42,27 +60,44 @@ const Hero = () => {
          </div>
 
          <div className="hero__right">
-            <div className="hero__right--img">
-               <img src={heroImg} alt="sneaker" />
+            {data.map(({ customer, customerImg, sneakerImg }, i) => {
+               if (index === i) {
+                  return (
+                     <div
+                        className={`hero__right--img ${
+                           index === i
+                              ? "animate__slideInLeft animate__delay-0.2s"
+                              : "animate__slideOutLeft"
+                        } animate__animated`}
+                     >
+                        <img src={sneakerImg} alt="sneaker" />
 
-               <div className="hero__right--img--notification">
-                  <div className="hero__right--img--notification--flex">
-                     <img src={notificationImg} alt="notification img" />
+                        <div className="hero__right--img--notification">
+                           <div className="hero__right--img--notification--flex">
+                              <img src={customerImg} alt="notification img" />
 
-                     <div className="hero__right--img--notification--flex--text">
-                        <b>Joan</b> has just purchased these sneakers now.
+                              <div className="hero__right--img--notification--flex--text">
+                                 <b>{customer}</b> has just purchased these
+                                 sneakers now.
+                              </div>
+
+                              <div className="hero__right--img--notification--flex--lock-icon">
+                                 <LockIcon />
+                              </div>
+                           </div>
+                        </div>
                      </div>
-
-                     <div className="hero__right--img--notification--flex--lock-icon">
-                        <LockIcon />
-                     </div>
-                  </div>
-               </div>
-            </div>
+                  );
+               }
+            })}
 
             <div className="hero__right--arrows">
-               <LeftArrowCircleOutlinedIcon />
-               <RightArrowCircleOutlinedIcon />
+               <div onClick={() => setIndex((prev) => prev - 1)}>
+                  <LeftArrowCircleOutlinedIcon />
+               </div>
+               <div onClick={() => setIndex((prev) => prev + 1)}>
+                  <RightArrowCircleOutlinedIcon />
+               </div>
             </div>
          </div>
       </section>
