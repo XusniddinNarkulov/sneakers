@@ -36,28 +36,13 @@
       overflow-y: hidden;
       padding: 5% 0 10% 0;
       gap: 2rem;
-      cursor: grabbing;
+      cursor: grab;
 
       &--card {
          position: relative;
          border-radius: 2rem;
          background: var(--bg-color);
          padding: 2rem;
-
-         // @media (max-width: 1250px) {
-         //    margin-bottom: 5%;
-         // }
-
-         // @media (max-width: 800px) {
-         //    margin-bottom: 10%;
-         // }
-
-         // @media (max-width: 700px) {
-         //    margin-bottom: 15%;
-         // }
-         // @media (max-width: 600px) {
-         //    margin-bottom: 20%;
-         // }
 
          h3 {
             font-weight: 700;
