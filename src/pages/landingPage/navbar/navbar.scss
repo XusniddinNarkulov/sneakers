@@ -27,3 +27,36 @@
       }
    }
 }
+
+.nav-logo {
+   @media only screen and (max-width: 991px) {
+      margin: 0 auto;
+      margin-top: 5%;
+      width: 3rem;
+   }
+}
+
+.nav-right-max-991px {
+   @media (max-width: 991px) {
+      position: absolute;
+      right: 3%;
+      top: 1rem;
+   }
+}
+
+.cart-icon {
+   span {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--pink);
+      font-size: 1rem;
+      position: absolute;
+      top: 1.3rem;
+      color: white;
+      right: -0.5rem;
+   }
+}
