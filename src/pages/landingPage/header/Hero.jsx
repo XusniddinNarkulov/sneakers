@@ -54,7 +54,7 @@ const Hero = () => {
             id="carouselExampleControls"
             data-bs-ride="carousel"
          >
-            <div class="carousel-inner relative w-full overflow-hidden">
+            <div className="carousel-inner relative w-full overflow-hidden">
                {data.map(({ customer, customerImg, sneakerImg }, i) => {
                   return (
                      <div
