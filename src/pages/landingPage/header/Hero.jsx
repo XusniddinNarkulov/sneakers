@@ -58,6 +58,7 @@ const Hero = () => {
                {data.map(({ customer, customerImg, sneakerImg }, i) => {
                   return (
                      <div
+                        key={i}
                         className={`hero__right--img ${
                            i === index && "active"
                         } carousel-item relative float-left w-full`}
@@ -65,7 +66,7 @@ const Hero = () => {
                         <img
                            src={sneakerImg}
                            alt="sneaker"
-                           class="block w-full"
+                           className="block w-full"
                         />
 
                         <div className="hero__right--img--notification">

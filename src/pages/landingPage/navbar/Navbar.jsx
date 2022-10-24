@@ -55,8 +55,8 @@ const Navbar = () => {
                   role="img"
                >
                   <path
-                     fill-rule="evenodd"
-                     clip-rule="evenodd"
+                     fillRule="evenodd"
+                     clipRule="evenodd"
                      d="M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2H31C31.5523 2 32 1.55228 32 1C32 0.447715 31.5523 0 31 0H1ZM1 10C0.447715 10 0 10.4477 0 11C0 11.5523 0.447715 12 1 12H31C31.5523 12 32 11.5523 32 11C32 10.4477 31.5523 10 31 10H1Z"
                      fill="#0A083A"
                   />
@@ -154,23 +154,23 @@ const Navbar = () => {
                      <path
                         d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z"
                         stroke="#0A083A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                      />
                      <path
                         d="M3 6H21"
                         stroke="#0A083A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                      />
                      <path
                         d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10"
                         stroke="#0A083A"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                      />
                   </svg>
 
